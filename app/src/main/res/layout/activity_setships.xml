@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewSetShipsDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/maven_pro"
+        android:text="@string/textSetShips"
+        android:textAlignment="center"
+        android:textColor="@color/chathams_blue"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/table_row_letters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewSetShipsDescription">
+
+        <TextView
+            android:id="@+id/char_empty"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/char_a"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/char_a"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/char_b"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/char_b"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/char_c"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/char_c"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/char_d"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/char_d"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/char_e"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/char_e"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/char_f"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/char_f"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/char_g"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/char_g"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/char_h"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/char_h"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/char_i"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/char_i"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/char_j"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/char_j"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/setPlayerBattleField"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintDimensionRatio="1F"
+        app:layout_constraintTop_toBottomOf="@id/table_row_letters">
+
+        <TableRow
+            android:id="@+id/enemy_table_row_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/enemy_table_row_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/enemy_table_row_3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/enemy_table_row_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/enemy_table_row_5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/enemy_table_row_6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/enemy_table_row_7"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/enemy_table_row_8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/enemy_table_row_9"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TableRow
+            android:id="@+id/enemy_table_row_10"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </TableLayout>
+
+    <Button
+        android:id="@+id/buttonFinishedShipsSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/chathams_blue"
+        android:text="@string/string_text_button_ready_to_play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setPlayerBattleField" />
+
+    <TextView
+        android:id="@+id/textCheckSetShips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/maven_pro"
+        android:text="@string/text_empty"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonFinishedShipsSetting" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

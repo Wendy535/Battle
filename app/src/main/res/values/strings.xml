@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Battle</string>
+    <string name="text_exit">Выйти</string>
+    <string name="text_repeat">Начать заново</string>
+    <string name="text_enemy_field_desription">Игровое поле противника</string>
+    <string name="text_player_field_description">Ваше игровое поле</string>
+    <string name="text_welcome">Добро пожаловать</string>
+    <string name="char_a">A</string>
+    <string name="char_b">B</string>
+    <string name="char_c">C</string>
+    <string name="char_d">D</string>
+    <string name="char_e">E</string>
+    <string name="char_f">F</string>
+    <string name="char_g">G</string>
+    <string name="char_h">H</string>
+    <string name="char_i">I</string>
+    <string name="char_j">J</string>
+    <string name="char_1">1</string>
+    <string name="string_char_1">1</string>
+    <string name="char_2">2</string>
+    <string name="char_3">3</string>
+    <string name="char_4">4</string>
+    <string name="char_5">5</string>
+    <string name="char_6">6</string>
+    <string name="char_7">7</string>
+    <string name="char_8">8</string>
+    <string name="char_9">9</string>
+    <string name="char_10">10</string>
+    <string name="text_empty" />
+    <string name="text_start_game">Начать игру</string>
+    <string name="battleships_game_logo">battleships game logo</string>
+    <string name="textButtonStartGame">Играть</string>
+    <string name="textButtonRules">Правила</string>
+    <string name="about_title">О программе</string>
+    <string name="gameRules">
+        Добро пожаловать в игру \"Морской бой\"!\n
+        \n
+        Правила очень простые: угадайте, где находятся корабли противника, и уничтожьте их.
+        Чтобы выбрать координаты для нанесения удара, просто нажмите на соответствующую кнпку на поле противника.\n
+        \n
+        Ваша флотилия, как и у вашего оппонента, состоит из 10 кораблей: один 4-палубный флагман, два 3-палубных,
+        три 2-палубных и 4 маленькие "мины". Перед началом игры расставьте свои корабли, нажимая на соответствующие
+        кнопки на экране. Помните, что корабли не должны соприкасаться (прямо как в жизни), даже по диагонали.\n
+        \n
+        Не забывайте, что большой брат следит за вами и тоже постарается вас уничтожить. Вы ходите по очереди.
+        Он может поразить ваши корабли точно так же, как и вы - его.\n
+        \n
+        Удачи!
+    </string>
+    <string name="textSetShips">Расставьте свои корабли, отмечая мышкой соответствующие квадраты.</string>
+    <string name="text_battle">Морской бой</string>
+    <string name="text_rules_annotation">Правила игры</string>
+    <string name="text_set_ships_annotation">Подготовка к игре</string>
+    <string name="text_button_ready_to_play">Готов к игре!</string>
+    <string name="string_text_button_ready_to_play">Готов к игре!</string>
+    <string name="text_check_your_ships">Проверьте, правильно ли расставлены корабли.</string>
+    <string name="text_check_your_ships_ok">Проверьте, правильно ли расставлены корабли.</string>
+</resources>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/main_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/button_restart"
+                    style="@android:style/Widget.Material.Light.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/text_repeat"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintEnd_toStartOf="@+id/button_exit"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_weight="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_goneMarginRight="5dp"
+                    app:rippleColor="@android:color/darker_gray" />
+
+                <Button
+                    android:id="@+id/button_exit"
+                    style="@android:style/Widget.Material.Light.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_marginEnd="5dp"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/text_exit"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/button_restart"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/commentsBeforeEnemyField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_welcome"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_buttons" />
+
+            <TextView
+                android:id="@+id/enemy_field_desription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorButtonNormal"
+                android:backgroundTint="?attr/colorButtonNormal"
+                android:text="@string/text_enemy_field_desription"
+                android:textAlignment="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/commentsBeforeEnemyField" />
+
+            <LinearLayout
+                android:id="@+id/table_row_letters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/enemy_field_desription">
+
+                <TextView
+                    android:id="@+id/char_empty"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/char_a"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/char_a"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/char_b"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/char_b"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/char_c"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/char_c"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/char_d"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/char_d"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/char_e"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/char_e"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/char_f"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/char_f"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/char_g"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/char_g"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/char_h"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/char_h"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/char_i"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/char_i"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/char_j"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/char_j"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/setPlayerBattleField"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1F"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/table_row_letters">
+
+                <TableRow
+                    android:id="@+id/enemy_table_row_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:id="@+id/enemy_table_row_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:id="@+id/enemy_table_row_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:id="@+id/enemy_table_row_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:id="@+id/enemy_table_row_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:id="@+id/enemy_table_row_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:id="@+id/enemy_table_row_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:id="@+id/enemy_table_row_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:id="@+id/enemy_table_row_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:id="@+id/enemy_table_row_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/commentsBeforePlayerField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_welcome"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/setPlayerBattleField" />
+
+            <TextView
+                android:id="@+id/player_field_desription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorButtonNormal"
+                android:backgroundTint="?attr/colorButtonNormal"
+                android:text="@string/text_player_field_description"
+                android:textAlignment="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/commentsBeforePlayerField" />
+
+            <LinearLayout
+                android:id="@+id/player_row_letters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/player_field_desription">
+
+                <TextView
+                    android:id="@+id/player_char_empty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_empty" />
+
+                <TextView
+                    android:id="@+id/player_char_a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/char_a"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/player_char_b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/char_b"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/player_char_c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/char_c"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/player_char_d"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/char_d"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/player_char_e"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/char_e"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/player_char_f"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/char_f"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/player_char_g"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/char_g"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/player_char_h"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/char_h"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/player_char_i"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/char_i"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/player_char_j"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/char_j"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/player_battle_field"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1.00"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/player_row_letters">
+
+                <TableRow
+                    android:id="@+id/player_table_row_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+
+                <TableRow
+                    android:id="@+id/player_table_row_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+
+                <TableRow
+                    android:id="@+id/player_table_row_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+
+                <TableRow
+                    android:id="@+id/player_table_row_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+
+                <TableRow
+                    android:id="@+id/player_table_row_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+
+                <TableRow
+                    android:id="@+id/player_table_row_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center" />
+
+                <TableRow
+                    android:id="@+id/player_table_row_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:id="@+id/player_table_row_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:id="@+id/player_table_row_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TableRow
+                    android:id="@+id/player_table_row_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </TableLayout>
+
+            <Button
+                android:id="@+id/buttonStart"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_start_game"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/player_battle_field" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
