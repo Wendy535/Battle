@@ -5,29 +5,24 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
+//HW:
+//-присвоить квалификаторы для battle_logo
+//-почитать про разницу между Serializable и Parcelable
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var buttonStartGame: Button
-    private lateinit var buttonRules: Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_greeting)
+        setContentView(R.layout.activity_main)
 
-        buttonStartGame = findViewById(R.id.buttonStartGame)
-        buttonStartGame.setOnClickListener {
+        findViewById<Button>(R.id.buttonStartGame).setOnClickListener {
             val intentToSetShips = Intent(this, ActivitySetShips::class.java)
             startActivity(intentToSetShips)
         }
 
-        buttonRules = findViewById(R.id.buttonRules)
-        buttonRules.setOnClickListener {
-            val intentToRules = Intent(this, ActivityRules::class.java)
-            startActivity(intentToRules)
+        findViewById<Button>(R.id.buttonRules).setOnClickListener {
+            startActivity(Intent(this, ActivityRules::class.java))
         }
-
     }
-
 }
 

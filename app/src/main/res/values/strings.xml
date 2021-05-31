@@ -55,4 +55,17 @@
     <string name="string_text_button_ready_to_play">Готов к игре!</string>
     <string name="text_check_your_ships">Проверьте, правильно ли расставлены корабли.</string>
     <string name="text_check_your_ships_ok">Проверьте, правильно ли расставлены корабли.</string>
+
+    <!--<array name="sdf">
+        <item>"Попал!"</item>,
+        "Точно в цель!",
+        "Супер!",
+        "Снайпер!",
+        "Глаз-алмаз!",
+        "Мастерски!",
+        "Отлично!",
+        "Победа близко!",
+        "Круто!",
+        "Так его!"
+    </array>-->
 </resources>
