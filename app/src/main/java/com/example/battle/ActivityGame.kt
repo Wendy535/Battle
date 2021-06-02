@@ -1,13 +1,12 @@
 package com.example.battle
 
-import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 
 
@@ -20,44 +19,49 @@ class ActivityGame : AppCompatActivity() {
     private lateinit var buttonStart: Button
     private val numbers = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
     private val positiveWords = arrayOf(
-            "Попал!",
-            "Точно в цель!",
-            "Супер!",
-            "Снайпер!",
-            "Глаз-алмаз!",
-            "Мастерски!",
-            "Отлично!",
-            "Победа близко!",
-            "Круто!",
-            "Так его!")
+        "Попал!",
+        "Точно в цель!",
+        "Супер!",
+        "Снайпер!",
+        "Глаз-алмаз!",
+        "Мастерски!",
+        "Отлично!",
+        "Победа близко!",
+        "Круто!",
+        "Так его!"
+    )
 
     private val missWords = arrayOf(
-            "Целься лучше!",
-            "Повезет в другой раз!",
-            "Пробуем еще!",
-            "Соберись!",
-            "Он хорошо маскируется!",
-            "Проверь прицел!",
-            "Сконцентрируйся",
-            "Думай как компьютер!", "Оступать некуда!")
+        "Целься лучше!",
+        "Повезет в другой раз!",
+        "Пробуем еще!",
+        "Соберись!",
+        "Он хорошо маскируется!",
+        "Проверь прицел!",
+        "Сконцентрируйся",
+        "Думай как компьютер!", "Оступать некуда!"
+    )
 
     private val aiShot = arrayOf(
-            "Ай!",
-            "Ох!",
-            "Бдыщ!",
-            "Это было больно!",
-            "Капитан, у нас проблемы!",
-            "Уф!",
-            "Тысяча чертей!",
-            "Нам досталось!",
-            "Ааааа!",
-            "Да что ж такое!",
-            "Опять!",
-            "А он хорош!")
+        "Ай!",
+        "Ох!",
+        "Бдыщ!",
+        "Это было больно!",
+        "Капитан, у нас проблемы!",
+        "Уф!",
+        "Тысяча чертей!",
+        "Нам досталось!",
+        "Ааааа!",
+        "Да что ж такое!",
+        "Опять!",
+        "А он хорош!"
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
+
+        val shipsCoordinates = intent.getSerializableExtra("key")
 
         enemyBattleField = findViewById(R.id.setPlayerBattleField)
         playerBattleField = findViewById(R.id.player_battle_field)
@@ -80,8 +84,8 @@ class ActivityGame : AppCompatActivity() {
             val ll = enemyBattleField.getChildAt(x) as TableRow
             val enemyFieldNumbers = TextView(this)
             val textviewParams = TableRow.LayoutParams(
-                    ConstraintLayout.LayoutParams.MATCH_CONSTRAINT,
-                    ConstraintLayout.LayoutParams.WRAP_CONTENT,
+                ConstraintLayout.LayoutParams.MATCH_CONSTRAINT,
+                ConstraintLayout.LayoutParams.WRAP_CONTENT,
             )
             textviewParams.weight = 1F
             enemyFieldNumbers.textAlignment = View.TEXT_ALIGNMENT_CENTER
@@ -91,8 +95,8 @@ class ActivityGame : AppCompatActivity() {
                 val enemyFieldButton = Button(this)
                 enemyFieldButton.id = View.generateViewId()
                 val buttonParams = TableRow.LayoutParams(
-                        ConstraintLayout.LayoutParams.MATCH_CONSTRAINT,
-                        ConstraintLayout.LayoutParams.WRAP_CONTENT
+                    ConstraintLayout.LayoutParams.MATCH_CONSTRAINT,
+                    ConstraintLayout.LayoutParams.WRAP_CONTENT
                 )
                 buttonParams.weight = 1F
                 enemyFieldButton.isClickable = true
@@ -105,12 +109,12 @@ class ActivityGame : AppCompatActivity() {
 
 
     private fun initPlayerBattleField() {
-        for (x in 0..9)  {
+        for (x in 0..9) {
             val ll2 = playerBattleField.getChildAt(x) as TableRow
             val playerFieldNumbers = TextView(this)
             val textviewParams = TableRow.LayoutParams(
-                    ConstraintLayout.LayoutParams.MATCH_CONSTRAINT,
-                    ConstraintLayout.LayoutParams.WRAP_CONTENT,
+                ConstraintLayout.LayoutParams.MATCH_CONSTRAINT,
+                ConstraintLayout.LayoutParams.WRAP_CONTENT,
             )
             textviewParams.weight = 1F
             playerFieldNumbers.textAlignment = View.TEXT_ALIGNMENT_CENTER
@@ -120,8 +124,8 @@ class ActivityGame : AppCompatActivity() {
                 val playerFieldButton = Button(this)
                 playerFieldButton.id = View.generateViewId()
                 val playerbuttonParams = TableRow.LayoutParams(
-                        ConstraintLayout.LayoutParams.MATCH_CONSTRAINT,
-                        ConstraintLayout.LayoutParams.WRAP_CONTENT
+                    ConstraintLayout.LayoutParams.MATCH_CONSTRAINT,
+                    ConstraintLayout.LayoutParams.WRAP_CONTENT
                 )
                 playerbuttonParams.weight = 1F
                 playerFieldButton.isClickable = true
